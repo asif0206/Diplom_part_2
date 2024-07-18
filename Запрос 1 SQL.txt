@@ -1,0 +1,7 @@
+#Задание 1 второй части финального проекта
+SELECT "Couriers".login,
+       COUNT(*) AS orders_in_delivery
+FROM "Couriers"
+INNER JOIN "Orders" ON "Couriers".id="Orders"."courierId"
+WHERE "Orders"."inDelivery"=true
+GROUP by "Couriers".login;
